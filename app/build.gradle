@@ -48,3 +48,12 @@ task singleJar(type: Jar) {
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+task soundJar(type: Jar) {
+    duplicatesStrategy = 'include'
+    manifest {
+        attributes 'Main-Class': 'com.doublechaintech.tool.s7command.PlaySound'
+    }
+
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

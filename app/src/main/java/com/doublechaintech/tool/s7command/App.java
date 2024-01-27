@@ -58,7 +58,7 @@ class Param{
     private boolean readOperation=true;
 
 
-    public static Param createFromArgs(String []args){
+    public static Param createFromArgs(){
 
         Param p=new Param();
         p.setIp(System.getProperty("s7.ip","192.168.10.1"));
@@ -122,7 +122,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Param p=Param.createFromArgs(args);
+        Param p=Param.createFromArgs();
         System.out.println(p);
         try{
             execute(p);
