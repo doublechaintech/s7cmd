@@ -14,6 +14,16 @@ class Param{
     private int dbBock=1;
     private int size=1;
 
+    public int getOffset() {
+        return offset;
+    }
+
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    private int offset=0;
+
     public String getIp() {
         return ip;
     }
@@ -64,6 +74,7 @@ class Param{
         p.setIp(System.getProperty("s7.ip","192.168.10.1"));
         p.setPort(Integer.parseInt(System.getProperty("s7.port","102")));
         p.setDbBock(Integer.parseInt(System.getProperty("s7.db","38")));
+        p.setDbBock(Integer.parseInt(System.getProperty("s7.offset","0")));
         p.setSize(Integer.parseInt(System.getProperty("s7.size","1")));
         return p;
     }

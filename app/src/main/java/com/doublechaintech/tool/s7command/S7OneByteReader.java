@@ -20,7 +20,7 @@ public class S7OneByteReader {
     private static byte readData(Param param) throws IOException {
         try{
             S7Connector connector = connectWith(param);
-            byte[] bs = connector.read(DaveArea.DB, param.getDbBock(), 1, 0);
+            byte[] bs = connector.read(DaveArea.DB, param.getDbBock(), 1, param.getOffset());
             connector.close();
             return bs[0];
         }catch (Exception e){

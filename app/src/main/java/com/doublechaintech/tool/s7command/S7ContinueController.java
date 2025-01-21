@@ -7,7 +7,7 @@ public class S7ContinueController extends ContinueController{
     public boolean continueToGo(){
         try {
             byte value=S7OneByteReader.readOneByte();
-            return value==1;
+            return value>0;
         } catch (Exception e) {
             System.out.println("请检查链接: " +e.getMessage());
             //System.exit(-100);

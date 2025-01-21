@@ -1,4 +1,4 @@
 alL:
 	gradle soundJar
 	cp build/libs/app.jar ../play-sound-when-alert.jar
-	cd ../ && scp play-sound-when-alert.jar philip@192.168.2.250:/data/upload/
+	cd ../ && scp -P 6543 play-sound-when-alert.jar philip@t420.doublechaintech.cn:/data/upload/
