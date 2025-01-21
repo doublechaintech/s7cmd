@@ -74,7 +74,7 @@ class Param{
         p.setIp(System.getProperty("s7.ip","192.168.10.1"));
         p.setPort(Integer.parseInt(System.getProperty("s7.port","102")));
         p.setDbBock(Integer.parseInt(System.getProperty("s7.db","38")));
-        p.setDbBock(Integer.parseInt(System.getProperty("s7.offset","0")));
+        p.setOffset(Integer.parseInt(System.getProperty("s7.offset","0")));
         p.setSize(Integer.parseInt(System.getProperty("s7.size","1")));
         return p;
     }
@@ -82,10 +82,11 @@ class Param{
     @Override
     public String toString() {
         return "Param{" +
-                "ip='" + ip + '\'' +
+                "dbBock=" + dbBock +
+                ", ip='" + ip + '\'' +
                 ", port=" + port +
-                ", dbBock=" + dbBock +
                 ", size=" + size +
+                ", offset=" + offset +
                 ", readOperation=" + readOperation +
                 '}';
     }
